@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SIWAL Dashboard</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                flex: 1;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .collapse-container {
+                margin-bottom: 10px;
+            }
+
+            .collapse-header {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .icon-text-spacing {
+                margin-left: 10px;
+            }
+
+            .faq-section {
+                margin-top: 50px;
+            }
+
+            .faq-header {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .faq .card-header {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .card-header h2 {
+                font-size: 1.25rem;
+            }
+
+            .faq .btn-link {
+                color: #fff;
+            }
+
+            footer {
+                background-color: #343a40;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                margin-top: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center mb-5">SIWAL Dashboard</h1>
+            <div id="dashboard-cards">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+
+            <div class="faq-section">
+                <div class="faq-header text-center">
+                    Pertanyaan yang Sering Diajukan
+                </div>
+                <div class="accordion" id="faqAccordion">
+                    <div class="card">
+                        <div class="card-header" id="faqHeading1">
+                            <h2 class="mb-0">
+                                <button
+                                    class="btn btn-primary"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#faqCollapse1"
+                                    aria-expanded="true"
+                                    aria-controls="faqCollapse1"
+                                >
+                                    Bagaimana Cara Menggunakan SIWAL?
+                                </button>
+                            </h2>
+                        </div>
+                        <div
+                            id="faqCollapse1"
+                            class="collapse show"
+                            aria-labelledby="faqHeading1"
+                            data-parent="#faqAccordion"
+                        >
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        Pastikan Semua File Dan Database
+                                        Terkoneksi Dengan Benar.
+                                        <ul>
+                                            <li>
+                                                Konfirmasikan Bahwa Server Dan
+                                                Database Berjalan Sesuai
+                                                Pengaturan.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Isi Data Pada Halaman Dosen.
+                                        <ul>
+                                            <li>
+                                                Masukkan Informasi Dosen,
+                                                Termasuk Nama Dan Nomor Induknya
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Isi Data Pada Halaman Matkul.
+                                        <ul>
+                                            <li>
+                                                Masukkan Informasi Mata Kuliah
+                                                Dan SKS Nya
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Kombinasikan Dosen Dengan Mata Kuliah
+                                        Yang Diampu.
+                                        <ul>
+                                            <li>
+                                                Gunakan Halaman Dosen Matkul
+                                                Untuk Menghubungkan Dosen Dengan
+                                                Mata Kuliah Yang Mereka Ajar.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Isi Data Kelas Pada Halaman Kelas.
+                                        <ul>
+                                            <li>
+                                                Masukkan Informasi Kelas Seperti
+                                                Nama Kelas Dan Kapasitas.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Hubungkan Kelas Dengan Mata Kuliah Yang
+                                        Diampu.
+                                        <ul>
+                                            <li>
+                                                Di Halaman Kelas Matkul, Kaitkan
+                                                Kelas Dengan Mata Kuliah Yang
+                                                Diambil Oleh Kelas Tersebut.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Isi Data Ruangan Pada Halaman Ruangan.
+                                        <ul>
+                                            <li>
+                                                Masukkan Informasi Ruangan,
+                                                Termasuk Nama Dan Nomor Ruangan,
+                                                Kapasitas.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Buat Jadwal Kuliah.
+                                        <ul>
+                                            <li>
+                                                Di Halaman Jadwal, Tambahkan
+                                                Jadwal Kuliah Secara Manual Atau
+                                                Gunakan Fitur Generate Otomatis
+                                                Untuk Membuat Jadwal Berdasarkan
+                                                Ketersediaan Dosen, Kelas, Dan
+                                                Ruangan.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqHeading2">
+                            <h2 class="mb-0">
+                                <button
+                                    class="btn btn-primary collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#faqCollapse2"
+                                    aria-expanded="false"
+                                    aria-controls="faqCollapse2"
+                                >
+                                    Bagaimana Cara Menghapus Semua Data?
+                                </button>
+                            </h2>
+                        </div>
+                        <div
+                            id="faqCollapse2"
+                            class="collapse"
+                            aria-labelledby="faqHeading2"
+                            data-parent="#faqAccordion"
+                        >
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        Mulailah Dengan Menghapus Data Jadwal.
+                                        <ul>
+                                            <li>
+                                                Buka Halaman Jadwal Dan Hapus
+                                                Entri Jadwal Yang Tidak
+                                                Diperlukan.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Hapus Data Yang Terkait Satu Sama Lain..
+                                        <ul>
+                                            <li>
+                                                Hapus Data Di Halaman 'Dosen
+                                                Matkul' Dan 'Kelas Matkul'
+                                                Sebelum Menghapus Data Induk.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Hapus Data Induk.
+                                        <ul>
+                                            <li>
+                                                Buka Halaman Dosen, Mata Kuliah,
+                                                Kelas, Dan Ruangan Untuk
+                                                Menghapus Data Yang Tidak
+                                                Berhubungan Secara Langsung.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-white text-center py-3 mt-auto">
+            <div class="container">
+                <p class="mb-0">
+                    Copyright &copy; <span id="currentYear"></span> SIWAL by
+                    @TIM PROJECT SIWAL. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("get_data.php")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const container =
+                            document.getElementById("dashboard-cards");
+                        const orderedTables = [
+                            "dosen",
+                            "matkul",
+                            "dosen_matkul",
+                            "kelas",
+                            "kelas_matkul",
+                            "ruangan",
+                            "jadwal",
+                        ];
+                        const icons = {
+                            dosen: "user-tie",
+                            matkul: "book",
+                            dosen_matkul: "chalkboard-teacher",
+                            kelas: "users",
+                            kelas_matkul: "clipboard-list",
+                            ruangan: "door-open",
+                            jadwal: "calendar-alt",
+                        };
+
+                        orderedTables.forEach((table, index) => {
+                            if (data[table]) {
+                                const collapseId = `collapse-${table}`;
+                                const card = document.createElement("div");
+                                card.className = "collapse-container";
+                                card.innerHTML = `
+                                <div class="card">
+                                    <div class="card-header" id="heading-${table}">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapse-header" data-toggle="collapse" data-target="#${collapseId}" aria-expanded="${
+                                    index === 0 ? "true" : "false"
+                                }" aria-controls="${collapseId}">
+                                                <i class="fas fa-${
+                                                    icons[table]
+                                                } fa-lg"></i><span class="icon-text-spacing">${table
+                                    .toUpperCase()
+                                    .replace("_", " ")}</span>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="${collapseId}" class="collapse ${
+                                    index === 0 ? "show" : ""
+                                }" aria-labelledby="heading-${table}" data-parent="#dashboard-cards">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${
+                                                data[table]
+                                            }</h5>
+                                            <p class="card-text">Total records in ${table
+                                                .toUpperCase()
+                                                .replace("_", " ")}</p>
+                                            <button class="btn btn-primary" onclick="window.location.href='${table}'">
+                                                <i class="fas fa-folder-open"></i> Go to ${table
+                                                    .toUpperCase()
+                                                    .replace("_", " ")}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                                container.appendChild(card);
+                            }
+                        });
+                    })
+                    .catch((error) => console.error("Error:", error));
+            });
+        </script>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
